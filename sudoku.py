@@ -148,7 +148,7 @@ class Cell:
         self._locked = True if value is not None else False
 
     def get_possible_values(self):
-        return self._possible_values[:]
+        return [self._value] if self._value is not None else self._possible_values[:]
 
     def get_value(self):
         return self._value
@@ -172,7 +172,6 @@ class Cell:
     def set_value(self, value):
         if not self._locked:
             self._value = value
-            self._possible_values = [value]
 
     def to_string(self):
         if self._value is None:
