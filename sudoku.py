@@ -50,7 +50,6 @@ class Board:
 
     def _scan_cells(self, cells):
         for value in range(1, 10):
-
             if len([cell for cell in cells if cell.get_value() == value]) == 1:
                 self._remove_possible_value(cells, value)
                 continue
@@ -173,6 +172,7 @@ class Cell:
     def set_value(self, value):
         if not self._locked:
             self._value = value
+            self._possible_values = [value]
 
     def to_string(self):
         if self._value is None:
