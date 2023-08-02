@@ -112,7 +112,7 @@ class Board:
             for x in range(0, 8, 3):
                 if not self._validate_block(y, x):
                     return False
-                
+
         return True
 
     def _validate_cells(self, cells):
@@ -126,7 +126,7 @@ class Board:
         for x in range(9):
             if not self._validate_column(x):
                 return False
-            
+
         return True
 
     def _validate_row(self, y):
@@ -136,7 +136,7 @@ class Board:
         for y in range(9):
             if not self._validate_row(y):
                 return False
-            
+
         return True
 
 
@@ -197,7 +197,7 @@ while True:
     if contents.endswith("\n"):
         break
 
-board = Board(list(map(lambda v: int(v), list(re.sub("\D+", "", contents.strip())))))
+board = Board(list(map(lambda v: int(v), list(re.sub("\D+", "", re.sub("-", "0", contents.strip()))))))
 start = time.time()
 
 try:
