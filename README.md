@@ -4,7 +4,7 @@ Sudoku puzzle solver written as a python refresher
 ## Usage
 
 ```sh
-Syntax: python3 sudoku.py
+Syntax: uv run sudoku.py
 ```
 
 Once running, you will be prompted to enter your puzzle. Use zero (0) to denote an empty square. Whitespace is optional. Once finished, the puzzle will be printed out with the original (fixed) values in white and the solved values in blue.
@@ -12,7 +12,7 @@ Once running, you will be prompted to enter your puzzle. Use zero (0) to denote 
 ## Example
 
 ```sh
-$ python sudoku.py 
+$ uv run sudoku.py 
 Enter your Sudoku board below, using zero (0) to represent empty squares.
 (Enter an empty line or press Ctrl+D or Crtl+Z to save)
 
